@@ -1,34 +1,39 @@
 ---
-title: "About Me"
+title: "About"
 date: 2026-11-21
 hidemeta: true
 searchHidden: false
-summary: "Get to know Isaac Fischer — software developer, open source enthusiast, and builder."
+summary: "About Isaac F — Computing Enthusiast."
 ---
 
-Hi, I'm **Isaac Fischer** (also known as **Pattatwa99** online).
+Hi, I'm **Isaac F** (also known as **Pattatwa99**).
 
-I'm a software developer with a passion for building clean, efficient, and user-centric software. Whether diving into backend systems, exploring modern web frameworks, or building experimental tools, I love taking ideas from concept to deployment.
+I am a computing enthusiast with an ongoing interest in understanding computers from the ground up — exploring the relationship between hardware and software, from low-level systems to user-facing applications.
 
----
-
-### 💻 What I Do
-
-- **Full-Stack Web Development**: Building scalable web applications using modern architectures, Python (Django, FastAPI), and lightweight static generators like Hugo.
-- **Developer Tooling & Automation**: Crafting automated CI/CD pipelines, workflows with GitHub Actions, and command-line utilities.
-- **Open Source Exploration**: Experimenting with new technologies, static site architecture, and creative interactive projects.
+I enjoy learning by building projects, experimenting, and documenting how things work.
 
 ---
 
-### 🛠️ Tech Stack & Skills
+### Technical Interests
 
-- **Languages:** Python, JavaScript, TypeScript, HTML5, CSS3, SQL, Bash
-- **Frameworks & Tools:** Hugo, Django, Git, GitHub Actions, Docker, Linux
-- **Design Philosophy:** Minimalist, performance-focused, and accessible
+Areas I actively explore and study:
+
+- **Systems Programming:** Especially in **C**, with a focus on memory, pointers, and runtime mechanics.
+- **Languages:** **Java** for software engineering, and **Python** for tooling, scripting, and quick experiments.
+- **Linux:** My daily operating system is **Fedora**, and I am deeply interested in open-source software and command-line environments.
+- **Hardware & Architecture:** Processors, memory systems, operating systems, and embedded computing (including tinkering with Raspberry Pi 4 boards).
+- **Networking & Self-Hosting:** Protocols, local networking, and self-hosted infrastructure.
+- **Simulation:** Procedural generation, strategy systems, and performance-oriented programming.
 
 ---
 
-### 📬 Connect With Me
+### Non-Technical Interests
+
+Outside of computing, I enjoy science fiction, worldbuilding, strategy and simulation games, and hands-on DIY projects.
+
+---
+
+### Connect
 
 - **GitHub:** [@Pattatwa99](https://github.com/Pattatwa99)
-- **Email:** [isaacfischer08@gmail.com](mailto:isaacfischer08@gmail.com)
+- **Email:** [donpotato@netherportal3.com](mailto:donpotato@netherportal3.com)

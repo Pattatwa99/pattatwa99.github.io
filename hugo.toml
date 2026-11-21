@@ -1,6 +1,6 @@
 baseURL = "https://pattatwa99.github.io/"
-title = "Isaac Fischer"
-paginate = 5
+title = "Isaac F"
+paginate = 8
 theme = "PaperMod"
 
 enableRobotsTXT = true
@@ -18,11 +18,11 @@ enableEmoji = true
 
 [params]
   env = "production"
-  title = "Isaac Fischer"
-  description = "Software Developer • Builder • Tech Explorer"
-  keywords = ["Isaac Fischer", "Developer", "Portfolio", "Blog", "Tech", "Python", "Web Development"]
-  author = "Isaac Fischer"
-  defaultTheme = "auto" # auto, dark, light
+  title = "Isaac F"
+  description = "Computing Enthusiast — Systems, Linux, and technical notes."
+  keywords = ["Isaac F", "Computing", "Systems", "Linux", "C", "Python", "Blog"]
+  author = "Isaac F"
+  defaultTheme = "dark" # Dark mode default per design brief
   disableThemeToggle = false
   ShowShareButtons = false
   ShowReadingTime = true
@@ -30,22 +30,18 @@ enableEmoji = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowPostNavLinks = true
-  mainSections = ["posts", "projects"]
+  mainSections = ["writing"] # Writing displays directly on homepage
+
+  [params.homeInfoParams]
+    Title = "Isaac F"
+    Content = """**Computing Enthusiast**
+
+Interested in the relationship between hardware and software, from low-level systems to applications.
+
+This site serves as a technical notebook and blog documenting experiments, systems programming, Linux, and things learned along the way."""
 
   [params.profileMode]
-    enabled = true
-    title = "Isaac Fischer"
-    subtitle = "Software Developer • Builder • Tech Explorer"
-    imageUrl = "forg.gif"
-    imageTitle = "Isaac Fischer"
-    imageWidth = 160
-    imageHeight = 160
-    buttons = [
-      { name = "Projects", url = "projects/" },
-      { name = "Posts", url = "posts/" },
-      { name = "About", url = "about/" },
-      { name = "Search", url = "search/" }
-    ]
+    enabled = false
 
   [[params.socialIcons]]
     name = "github"
@@ -53,7 +49,7 @@ enableEmoji = true
 
   [[params.socialIcons]]
     name = "email"
-    url = "mailto:isaacfischer08@gmail.com"
+    url = "mailto:donpotato@netherportal3.com"
 
   [[params.socialIcons]]
     name = "rss"
@@ -76,21 +72,21 @@ enableEmoji = true
 
 [menu]
   [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "projects/"
+    identifier = "writing"
+    name = "Writing"
+    url = "writing/"
     weight = 10
 
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "posts/"
+    identifier = "notes"
+    name = "Notes"
+    url = "notes/"
     weight = 20
 
   [[menu.main]]
-    identifier = "archives"
-    name = "Archives"
-    url = "archives/"
+    identifier = "about"
+    name = "About"
+    url = "about/"
     weight = 30
 
   [[menu.main]]
@@ -98,9 +94,3 @@ enableEmoji = true
     name = "Search"
     url = "search/"
     weight = 40
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "about/"
-    weight = 50

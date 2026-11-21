@@ -1,0 +1,51 @@
+/* Color palette specified in Design Brief */
+:root {
+    --theme: #F7F8FA;
+    --entry: #FFFFFF;
+    --primary: #202633;
+    --secondary: #687386;
+    --tertiary: #E2E8F0;
+    --content: #202633;
+    --border: #E2E8F0;
+    --code-block-bg: #1A1D27;
+    --code-bg: #EDF2F7;
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    --theme: #171923;
+    --entry: #222735;
+    --primary: #E2E8F0;
+    --secondary: #94A3B8;
+    --tertiary: #2D3748;
+    --content: #CBD5E1;
+    --code-block-bg: #11131B;
+    --code-bg: #1A1D27;
+    --border: #2D3748;
+    color-scheme: dark;
+}
+
+/* Subtle teal/blue accent */
+a {
+    color: #4F8FA8;
+}
+
+.first-entry.home-info {
+    border: 1px solid var(--border);
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin-bottom: 28px;
+}
+
+.first-entry.home-info .entry-header h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.first-entry.home-info .entry-content {
+    color: var(--secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}

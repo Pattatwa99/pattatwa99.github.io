@@ -1,46 +1,54 @@
-# Isaac Fischer — Personal Portfolio & Blog
+# Isaac F — Personal Website & Technical Notebook
 
-Personal website and blog built with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, deployed to GitHub Pages at **[pattatwa99.github.io](https://pattatwa99.github.io)**.
+Personal site and technical notebook built with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, deployed to GitHub Pages at **[pattatwa99.github.io](https://pattatwa99.github.io)**.
 
-## 🚀 Features
+## 📌 Architecture & Design
 
-- **Profile Mode Landing Page:** Showcasing avatar (`forg.gif`), bio, quick navigation, and social links.
-- **Dark / Light Mode:** Automatic system preference detection with a manual toggle button.
-- **Projects Showcase:** Dedicated `/projects/` section for software, tools, and experiments.
-- **Blog & Articles:** Markdown-based blogging with syntax highlighting, copy code buttons, and reading time.
-- **Client-Side Search:** Instant fuzzy search powered by Fuse.js at `/search/`.
-- **Chronological Archive:** Tagged and dated posts index at `/archives/`.
-- **Automated CI/CD:** GitHub Actions workflow in `.github/workflows/deploy.yml` automatically builds and deploys to GitHub Pages on push.
+- **Home Page:** Displays an introduction as a Computing Enthusiast along with the latest posts from the **Writing** section.
+- **Writing:** Long-form technical explanations, development logs, and tutorials (`content/writing/`).
+- **Notes:** Shorter technical observations, commands, references, and things learned (`content/notes/`).
+- **About:** Personal background, technical interests, and contact information (`content/about.md`).
+- **Search:** Client-side fuzzy search powered by Fuse.js at `/search/`.
+- **Styling:** Technical minimalism with dark mode by default (`#171923` bg, `#222735` surface, `#4F8FA8` accent), with a light mode toggle available.
+- **CI/CD:** Automated GitHub Actions workflow in `.github/workflows/deploy.yml` deploys on push to `master`.
 
 ## 💻 Local Development
 
-Hugo is installed locally. To preview the site:
+Hugo is installed locally. To run the development server:
 
 ```bash
-# Start local Hugo development server with drafts included
 hugo server -D
 ```
 
-Then open `http://localhost:1313/` in your browser.
+Then visit `http://localhost:1313/` in your browser.
 
-## 🛠️ Building
+## 📝 Creating New Content
 
-To generate the static production site:
+To create a new writing post:
+```bash
+hugo new writing/my-new-post.md
+```
+
+To create a new note:
+```bash
+hugo new notes/my-quick-note.md
+```
+
+## 🛠️ Building for Production
 
 ```bash
 hugo --gc --minify
 ```
 
-The compiled static files are generated in the `./public` directory.
+Outputs static files to the `./public` folder.
 
-## 🚢 Deployment to GitHub Pages
+## 🚢 Deployment
 
-1. In your GitHub repository settings under **Settings > Pages**:
-   - Set **Source** to **GitHub Actions**.
+1. Under GitHub repository **Settings > Pages**, set **Source** to **GitHub Actions**.
 2. Commit and push your changes:
    ```bash
    git add .
-   git commit -m "Update site content"
+   git commit -m "Add new post"
    git push origin master
    ```
-3. GitHub Actions will automatically run the build and publish the site.
+GitHub Actions will automatically build and publish to `pattatwa99.github.io`.
