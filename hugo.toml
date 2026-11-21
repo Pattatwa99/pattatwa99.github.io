@@ -19,10 +19,10 @@ enableEmoji = true
 [params]
   env = "production"
   title = "Isaac F"
-  description = "Computing Enthusiast — Systems, Linux, and technical notes."
-  keywords = ["Isaac F", "Computing", "Systems", "Linux", "C", "Python", "Blog"]
+  description = "Computing Enthusiast — Personal Blog."
+  keywords = ["Isaac F", "Computing", "Blog", "Systems", "Linux"]
   author = "Isaac F"
-  defaultTheme = "dark" # Dark mode default per design brief
+  defaultTheme = "dark"
   disableThemeToggle = false
   ShowShareButtons = false
   ShowReadingTime = true
@@ -30,15 +30,13 @@ enableEmoji = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowPostNavLinks = true
-  mainSections = ["writing"] # Writing displays directly on homepage
+  mainSections = ["posts"]
 
   [params.homeInfoParams]
     Title = "Isaac F"
     Content = """**Computing Enthusiast**
 
-Interested in the relationship between hardware and software, from low-level systems to applications.
-
-This site serves as a technical notebook and blog documenting experiments, systems programming, Linux, and things learned along the way."""
+Personal blog and technical notebook."""
 
   [params.profileMode]
     enabled = false
@@ -72,25 +70,25 @@ This site serves as a technical notebook and blog documenting experiments, syste
 
 [menu]
   [[menu.main]]
-    identifier = "writing"
-    name = "Writing"
-    url = "writing/"
+    identifier = "posts"
+    name = "Posts"
+    url = "posts/"
     weight = 10
 
   [[menu.main]]
-    identifier = "notes"
-    name = "Notes"
-    url = "notes/"
+    identifier = "archives"
+    name = "Archives"
+    url = "archives/"
     weight = 20
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "about/"
-    weight = 30
 
   [[menu.main]]
     identifier = "search"
     name = "Search"
     url = "search/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "about/"
     weight = 40

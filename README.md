@@ -1,54 +1,50 @@
-# Isaac F — Personal Website & Technical Notebook
+# Isaac F — Personal Blog
 
-Personal site and technical notebook built with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, deployed to GitHub Pages at **[pattatwa99.github.io](https://pattatwa99.github.io)**.
+Minimalist personal blog and technical notebook built with [Hugo](https://gohugo.io/) and [PaperMod](https://github.com/adityatelange/hugo-PaperMod), deployed to GitHub Pages at **[pattatwa99.github.io](https://pattatwa99.github.io)**.
 
-## 📌 Architecture & Design
+## ✍️ Writing a Post
 
-- **Home Page:** Displays an introduction as a Computing Enthusiast along with the latest posts from the **Writing** section.
-- **Writing:** Long-form technical explanations, development logs, and tutorials (`content/writing/`).
-- **Notes:** Shorter technical observations, commands, references, and things learned (`content/notes/`).
-- **About:** Personal background, technical interests, and contact information (`content/about.md`).
-- **Search:** Client-side fuzzy search powered by Fuse.js at `/search/`.
-- **Styling:** Technical minimalism with dark mode by default (`#171923` bg, `#222735` surface, `#4F8FA8` accent), with a light mode toggle available.
-- **CI/CD:** Automated GitHub Actions workflow in `.github/workflows/deploy.yml` deploys on push to `master`.
+To start a new blog post, simply create a Markdown file in `content/posts/`:
 
-## 💻 Local Development
+```bash
+# Using Hugo CLI
+hugo new posts/my-first-post.md
+```
 
-Hugo is installed locally. To run the development server:
+Or manually create a `.md` file inside `content/posts/` with standard front matter:
+
+```markdown
+---
+title: "My First Post"
+date: 2026-11-21
+draft: false
+tags: ["computing", "linux"]
+summary: "A brief summary of the post."
+---
+
+Your post content here in Markdown.
+```
+
+When you publish a post in `content/posts/`, it automatically appears on the homepage feed, in the Posts list, in the chronological Archives, and in the fuzzy Search index.
+
+## 💻 Local Preview
+
+Run the local Hugo development server:
 
 ```bash
 hugo server -D
 ```
 
-Then visit `http://localhost:1313/` in your browser.
+Open `http://localhost:1313/` in your browser. Live reload is enabled automatically.
 
-## 📝 Creating New Content
+## 🚢 Deploying to GitHub Pages
 
-To create a new writing post:
-```bash
-hugo new writing/my-new-post.md
-```
-
-To create a new note:
-```bash
-hugo new notes/my-quick-note.md
-```
-
-## 🛠️ Building for Production
+Commit and push your changes to `master`:
 
 ```bash
-hugo --gc --minify
+git add .
+git commit -m "Publish new post"
+git push origin master
 ```
 
-Outputs static files to the `./public` folder.
-
-## 🚢 Deployment
-
-1. Under GitHub repository **Settings > Pages**, set **Source** to **GitHub Actions**.
-2. Commit and push your changes:
-   ```bash
-   git add .
-   git commit -m "Add new post"
-   git push origin master
-   ```
-GitHub Actions will automatically build and publish to `pattatwa99.github.io`.
+GitHub Actions will build and deploy the update to `pattatwa99.github.io` within seconds.
