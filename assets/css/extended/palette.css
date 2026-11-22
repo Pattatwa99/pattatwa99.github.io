@@ -25,8 +25,12 @@
     color-scheme: dark;
 }
 
-/* Subtle teal/blue accent */
+/* Link styling with accessible WCAG AA contrast */
 a {
+    color: #2D6F87;
+}
+
+:root[data-theme="dark"] a {
     color: #4F8FA8;
 }
 
@@ -48,4 +52,46 @@ a {
     color: var(--secondary);
     font-size: 1.05rem;
     line-height: 1.6;
+}
+
+/* Home Info Profile Avatar */
+.first-entry.home-info {
+    min-height: unset;
+}
+
+.home-info-container {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.home-info-avatar {
+    flex-shrink: 0;
+}
+
+.home-info-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 2px solid var(--tertiary);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.home-info-content {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .home-info-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .first-entry.home-info .social-icons {
+        justify-content: center;
+    }
 }

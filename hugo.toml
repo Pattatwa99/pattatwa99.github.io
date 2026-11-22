@@ -22,6 +22,7 @@ enableEmoji = true
   description = "Computing Enthusiast — Personal Blog."
   keywords = ["Isaac F", "Computing", "Blog", "Systems", "Linux"]
   author = "Isaac F"
+  images = ["IMG_1747.JPEG"]
   defaultTheme = "dark"
   disableThemeToggle = false
   ShowShareButtons = false
@@ -37,9 +38,19 @@ enableEmoji = true
     Content = """**Computing Enthusiast**
 
 Personal blog and technical notebook."""
+    imageUrl = "IMG_1747.JPEG"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "Isaac F"
 
   [params.profileMode]
     enabled = false
+    title = "Isaac F"
+    subtitle = "Computing Enthusiast — Personal Blog."
+    imageUrl = "IMG_1747.JPEG"
+    imageTitle = "Isaac F"
+    imageWidth = 150
+    imageHeight = 150
 
   [[params.socialIcons]]
     name = "github"
@@ -51,13 +62,14 @@ Personal blog and technical notebook."""
 
   [[params.socialIcons]]
     name = "rss"
-    url = "index.xml"
+    url = "/index.xml"
 
   [params.assets]
     favicon = "favicon.ico"
     favicon16x16 = "favicon-32x32.png"
     favicon32x32 = "favicon-32x32.png"
     apple_touch_icon = "apple-touch-icon-180x180.png"
+    safari_pinned_tab = "favicon.svg"
 
   [params.fuseOpts]
     isCaseSensitive = false
