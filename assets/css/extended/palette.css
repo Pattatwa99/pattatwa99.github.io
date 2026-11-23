@@ -95,3 +95,60 @@ a {
         justify-content: center;
     }
 }
+
+/* Home About Section */
+.home-about-section {
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    color: var(--content);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.home-about-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 24px 0 12px 0;
+}
+
+.home-about-section p {
+    margin-bottom: 14px;
+}
+
+.home-about-section ul {
+    margin-bottom: 18px;
+    padding-inline-start: 1.4rem;
+}
+
+.home-about-section li {
+    margin-bottom: 8px;
+    color: var(--content);
+}
+
+.home-about-section li strong {
+    color: var(--primary);
+}
+
+.home-about-section hr {
+    margin: 22px 0;
+    height: 1px;
+    background: var(--border);
+    border: 0;
+}
+
+/* Home Recent Posts Header */
+.home-posts-header {
+    margin: 36px 0 18px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--tertiary);
+}
+
+.home-posts-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.01em;
+    margin: 0;
+}

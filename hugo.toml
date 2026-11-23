@@ -98,9 +98,3 @@ Personal blog and technical notebook."""
     name = "Search"
     url = "search/"
     weight = 30
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "about/"
-    weight = 40

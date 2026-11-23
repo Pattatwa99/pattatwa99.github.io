@@ -1,5 +1,5 @@
 {{- with site.Params.homeInfoParams }}
-<article class="first-entry home-info">
+<article class="first-entry home-info" id="about">
     <div class="home-info-container">
         {{- if .imageUrl }}
         <div class="home-info-avatar">
@@ -20,5 +20,17 @@
             </footer>
         </div>
     </div>
+    {{- with site.GetPage "about" }}
+    <div class="home-about-section md-content">
+        {{ .Content }}
+    </div>
+    {{- end }}
 </article>
 {{- end -}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- if gt (len $pages) 0 }}
+<div class="home-posts-header">
+    <h2 class="home-posts-title">Recent Posts</h2>
+</div>
+{{- end }}
