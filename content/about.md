@@ -24,7 +24,7 @@ Areas I actively explore and study:
 ### Non-Technical Interests
 
 Outside of computing, I enjoy:
-- **Oliver:** We hold this truth to be self evident, that Oliver is the bestest dog, no matter what other dog-owned-peoples say.
+- **Oliver:** We hold this truth to be self evident, that Oliver is the bestest dog, no matter what others say.
 - **Political Philosophy:** I was tracking with Plato, but then everything got all 1984 :(
 - **History:** If you ever aren't sure what to do, every bad decision ever can be found in the annals of European dynasties. 
 - **Video Games:** Steam library ever growing...

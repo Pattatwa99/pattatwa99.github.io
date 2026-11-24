@@ -70,6 +70,8 @@ Personal blog and technical notebook."""
     favicon32x32 = "favicon-32x32.png"
     apple_touch_icon = "apple-touch-icon-180x180.png"
     safari_pinned_tab = "favicon.svg"
+    theme_color = "#08070b"
+    msapplication_TileColor = "#08070b"
 
   [params.fuseOpts]
     isCaseSensitive = false

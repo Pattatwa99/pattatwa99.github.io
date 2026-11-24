@@ -1,51 +1,178 @@
-/* Color palette specified in Design Brief */
+/* ==========================================================================
+   Black & Purple Theme - Custom Palette & Styling
+   ========================================================================== */
+
 :root {
-    --theme: #F7F8FA;
-    --entry: #FFFFFF;
-    --primary: #202633;
-    --secondary: #687386;
-    --tertiary: #E2E8F0;
-    --content: #202633;
-    --border: #E2E8F0;
-    --code-block-bg: #1A1D27;
-    --code-bg: #EDF2F7;
+    --theme: #fcfbfe;
+    --entry: #ffffff;
+    --primary: #171126;
+    --secondary: #6e6485;
+    --tertiary: #dfd8f2;
+    --content: #2b233e;
+    --border: #e6e0f2;
+    --code-block-bg: #141124;
+    --code-bg: #f2edf9;
+    --accent-purple: #7e22ce;
+    --accent-purple-light: #9333ea;
+    --accent-purple-bright: #a855f7;
+    --accent-purple-glow: rgba(147, 51, 234, 0.2);
+    --accent-purple-subtle: rgba(147, 51, 234, 0.08);
+    --card-shadow: 0 4px 20px -2px rgba(100, 60, 160, 0.08), 0 0 0 1px rgba(147, 51, 234, 0.1);
+    --card-hover-shadow: 0 8px 30px -4px rgba(100, 60, 160, 0.16), 0 0 20px rgba(147, 51, 234, 0.2), 0 0 0 1px rgba(147, 51, 234, 0.35);
     color-scheme: light;
 }
 
 :root[data-theme="dark"] {
-    --theme: #171923;
-    --entry: #222735;
-    --primary: #E2E8F0;
-    --secondary: #94A3B8;
-    --tertiary: #2D3748;
-    --content: #CBD5E1;
-    --code-block-bg: #11131B;
-    --code-bg: #1A1D27;
-    --border: #2D3748;
+    /* Pure Black / Obsidian background */
+    --theme: #08070b;
+    /* Elevated dark violet-slate card surface */
+    --entry: #0f0d18;
+    /* Primary text */
+    --primary: #f5f3fb;
+    /* Secondary text / metadata */
+    --secondary: #a79cb8;
+    /* Tertiary / dividers */
+    --tertiary: #453468;
+    /* Content text */
+    --content: #ded9eb;
+    /* Deep obsidian code blocks */
+    --code-block-bg: #0b0a13;
+    /* Inline code pill */
+    --code-bg: #191528;
+    /* Crisp dark violet border */
+    --border: #231d36;
+    
+    /* Purple highlights and shading */
+    --accent-purple: #a855f7;
+    --accent-purple-light: #c084fc;
+    --accent-purple-bright: #d8b4fe;
+    --accent-purple-glow: rgba(168, 85, 247, 0.3);
+    --accent-purple-subtle: rgba(168, 85, 247, 0.12);
+    --card-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(168, 85, 247, 0.14);
+    --card-hover-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.9), 0 0 24px rgba(168, 85, 247, 0.28), 0 0 0 1px rgba(168, 85, 247, 0.45);
     color-scheme: dark;
 }
 
-/* Link styling with accessible WCAG AA contrast */
+/* Atmospheric Radial Shading in Dark Mode */
+:root[data-theme="dark"] body {
+    background-color: var(--theme);
+    background-image:
+        radial-gradient(ellipse 90% 600px at 50% -100px, rgba(147, 51, 234, 0.14), transparent 70%),
+        radial-gradient(circle 500px at 100% 400px, rgba(126, 34, 206, 0.06), transparent 70%),
+        radial-gradient(circle 450px at 0% 800px, rgba(168, 85, 247, 0.05), transparent 70%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #251e36;
+    border-radius: 4px;
+    border: 1px solid rgba(168, 85, 247, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-purple);
+    box-shadow: 0 0 10px var(--accent-purple-glow);
+}
+
+/* Selection Highlight */
+::selection {
+    background: rgba(168, 85, 247, 0.38);
+    color: #ffffff;
+}
+
+/* Global Link Styling */
 a {
-    color: #2D6F87;
+    color: var(--accent-purple);
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-:root[data-theme="dark"] a {
-    color: #4F8FA8;
+a:hover {
+    color: var(--accent-purple-light);
 }
 
+:root[data-theme="dark"] a:hover {
+    text-shadow: 0 0 10px var(--accent-purple-glow);
+}
+
+/* Navigation & Header */
+.header-nav {
+    border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.logo a {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.logo a:hover {
+    color: var(--accent-purple-light);
+    transform: translateY(-1px);
+}
+
+.menu a {
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--accent-purple-light);
+    text-shadow: 0 0 8px var(--accent-purple-glow);
+}
+
+.menu .active {
+    color: var(--accent-purple-light) !important;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-purple);
+    padding-bottom: 2px;
+    box-shadow: 0 4px 8px -2px var(--accent-purple-glow);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+    transform: rotate(15deg) scale(1.1);
+    color: var(--accent-purple-light);
+}
+
+/* Home Info Card */
 .first-entry.home-info {
-    border: 1px solid var(--border);
+    min-height: unset;
     background: var(--entry);
-    border-radius: var(--radius);
-    padding: 24px 28px;
-    margin-bottom: 28px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    box-shadow: var(--card-shadow);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.first-entry.home-info:hover {
+    border-color: rgba(168, 85, 247, 0.35);
+    box-shadow: var(--card-hover-shadow);
 }
 
 .first-entry.home-info .entry-header h1 {
-    font-size: 1.85rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--primary) 65%, var(--accent-purple-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .first-entry.home-info .entry-content {
@@ -54,11 +181,7 @@ a {
     line-height: 1.6;
 }
 
-/* Home Info Profile Avatar */
-.first-entry.home-info {
-    min-height: unset;
-}
-
+/* Home Info Avatar with Glowing Shading */
 .home-info-container {
     display: flex;
     align-items: center;
@@ -75,8 +198,15 @@ a {
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    border: 2px solid var(--tertiary);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    border: 2px solid var(--accent-purple);
+    box-shadow: 0 0 25px var(--accent-purple-glow), 0 4px 16px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.first-entry.home-info:hover .home-info-avatar img {
+    transform: scale(1.03);
+    border-color: var(--accent-purple-light);
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.45), 0 6px 20px rgba(0, 0, 0, 0.7);
 }
 
 .home-info-content {
@@ -96,6 +226,17 @@ a {
     }
 }
 
+/* Social Icons */
+.social-icons a {
+    transition: transform 0.2s ease, color 0.2s ease, filter 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-purple-light);
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 8px var(--accent-purple-glow));
+}
+
 /* Home About Section */
 .home-about-section {
     margin-top: 24px;
@@ -110,7 +251,20 @@ a {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--primary);
-    margin: 24px 0 12px 0;
+    margin: 26px 0 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-about-section h3::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.1em;
+    background: var(--accent-purple);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--accent-purple);
 }
 
 .home-about-section p {
@@ -132,23 +286,210 @@ a {
 }
 
 .home-about-section hr {
-    margin: 22px 0;
+    margin: 24px 0;
     height: 1px;
-    background: var(--border);
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.4), transparent);
     border: 0;
 }
 
-/* Home Recent Posts Header */
+/* Home Recent Posts Header with Purple Accent Divider */
 .home-posts-header {
-    margin: 36px 0 18px 0;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--tertiary);
+    margin: 38px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, var(--accent-purple) 0%, rgba(168, 85, 247, 0.3) 60%, transparent 100%) 1;
 }
 
 .home-posts-title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-weight: 700;
     color: var(--primary);
     letter-spacing: -0.01em;
     margin: 0;
+}
+
+/* Post Cards (.post-entry) with Shading & Purple Hover Glow */
+.post-entry {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+    transform: translateY(-3px);
+    border-color: rgba(168, 85, 247, 0.45);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.post-entry:hover .entry-header h2 {
+    color: var(--accent-purple-light);
+    transition: color 0.2s ease;
+}
+
+/* Post Tags - Soft Purple Glowing Pills */
+.post-tags a {
+    background: var(--accent-purple-subtle);
+    color: var(--accent-purple-bright);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 999px;
+    padding: 0 16px;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.post-tags a:hover {
+    background: rgba(168, 85, 247, 0.24);
+    border-color: var(--accent-purple);
+    color: #ffffff;
+    box-shadow: 0 0 14px var(--accent-purple-glow);
+}
+
+/* Table of Contents */
+details.toc {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: border-color 0.2s ease;
+}
+
+details.toc:hover {
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+details.toc summary:hover {
+    color: var(--accent-purple-light);
+}
+
+.toc a:hover {
+    color: var(--accent-purple-light);
+    text-decoration-color: var(--accent-purple-light);
+}
+
+/* Blockquotes with Purple Highlight & Shading */
+.md-content blockquote {
+    border-left: 3px solid var(--accent-purple);
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.09) 0%, rgba(168, 85, 247, 0.01) 100%);
+    padding: 12px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: var(--content-gap) 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Inline Code & Code Blocks */
+.md-content code:not(pre code) {
+    background: var(--code-bg);
+    color: var(--accent-purple-bright);
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    border-radius: 5px;
+    padding: 2px 6px;
+}
+
+.post-content pre {
+    border: 1px solid rgba(168, 85, 247, 0.16);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.post-content .copy-code {
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 6px;
+    background: var(--entry);
+    color: var(--secondary);
+    transition: all 0.2s ease;
+}
+
+.post-content .copy-code:hover {
+    color: var(--accent-purple-light);
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 10px var(--accent-purple-glow);
+}
+
+/* Post Pagination (.paginav) */
+.paginav {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+    transition: border-color 0.2s ease;
+}
+
+.paginav:hover {
+    border-color: rgba(168, 85, 247, 0.35);
+}
+
+.paginav a:hover {
+    background: var(--accent-purple-subtle);
+    color: var(--accent-purple-light);
+}
+
+/* Search Box & Results */
+.searchbox input {
+    background: var(--entry);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    color: var(--primary);
+    padding: 10px 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchbox input:focus {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 18px var(--accent-purple-glow), 0 0 0 1px var(--accent-purple);
+    outline: none;
+}
+
+.searchResults li {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.searchResults li:hover,
+.searchResults li:focus-within {
+    transform: translateY(-2px);
+    border-color: rgba(168, 85, 247, 0.45);
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* Archive List Enhancements */
+.archive-year:not(:last-of-type) {
+    border-bottom: 2px solid var(--border);
+}
+
+.archive-month:not(:last-of-type) {
+    border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+}
+
+.archive-entry-title:hover {
+    color: var(--accent-purple-light);
+}
+
+/* Scroll-to-Top Button (.top-link) */
+.top-link {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(147, 51, 234, 0.45), 0 4px 14px rgba(0, 0, 0, 0.6);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.3s ease;
+}
+
+.top-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 28px rgba(168, 85, 247, 0.7), 0 6px 18px rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+/* Footer Styling */
+.footer {
+    border-top: 1px solid rgba(168, 85, 247, 0.1);
+    margin-top: 40px;
+    padding-top: 24px;
+}
+
+.footer a:hover {
+    color: var(--accent-purple-light);
+    text-shadow: 0 0 8px var(--accent-purple-glow);
 }
